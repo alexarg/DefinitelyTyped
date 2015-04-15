@@ -786,6 +786,7 @@ declare module Windows {
             export class BackgroundTaskBuilder implements Windows.ApplicationModel.Background.IBackgroundTaskBuilder {
                 name: string;
                 taskEntryPoint: string;
+                cancelOnConditionLoss: boolean;
                 setTrigger(trigger: Windows.ApplicationModel.Background.IBackgroundTrigger): void;
                 addCondition(condition: Windows.ApplicationModel.Background.IBackgroundCondition): void;
                 register(): Windows.ApplicationModel.Background.BackgroundTaskRegistration;
